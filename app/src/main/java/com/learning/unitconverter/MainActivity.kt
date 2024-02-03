@@ -3,6 +3,8 @@ package com.learning.unitconverter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -22,13 +24,25 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    UnitConverter()
                 }
             }
         }
     }
 }
 
+@Composable
+fun UnitConverter() {
+    Column {
+        // Here all the UI element will be stacked below each other
+
+        Row {
+            // Here all the UI element will be stacked next to each other
+            Greeting("Android")
+            Greeting("Android")
+        }
+    }
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
