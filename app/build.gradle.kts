@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.learning.unitconverter"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.learning.unitconverter"
