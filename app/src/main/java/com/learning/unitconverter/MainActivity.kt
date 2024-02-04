@@ -30,9 +30,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.learning.unitconverter.ui.theme.UnitConverterTheme
 import kotlin.math.roundToInt
 
@@ -65,6 +69,13 @@ fun UnitConverter() {
     var oExpanded by remember { mutableStateOf(false) }
     var conversionFactor  = remember { mutableStateOf(0.01) }
     var oConversionFactor  = remember { mutableStateOf(0.01) }
+
+    val customTextStyle = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontSize = 16.sp,
+        color = Color.Black
+
+    )
 
     fun convertUnits() {
         // ?: elvis operator
@@ -171,7 +182,7 @@ fun UnitConverter() {
 
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "Result: $outputValue $outputUnit", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "Result: $outputValue $outputUnit", style = customTextStyle)
     }
 }
 @Preview(showBackground = true)
