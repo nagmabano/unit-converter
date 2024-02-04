@@ -8,7 +8,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
@@ -23,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.learning.unitconverter.ui.theme.UnitConverterTheme
 
 class MainActivity : ComponentActivity() {
@@ -50,9 +53,11 @@ fun UnitConverter() {
         horizontalAlignment = Alignment.CenterHorizontally) {
         // Here all the UI element will be stacked below each other
         Text(text = "Unit Converter")
+        Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(value = "", onValueChange = {
             // what should happen when the value of outlined text field changes
         })
+        Spacer(modifier = Modifier.height(16.dp))
         Row {
             Box {
                 Button(onClick = { /*TODO*/ }) {
@@ -73,6 +78,7 @@ fun UnitConverter() {
 //            }
 
         }
+        Spacer(modifier = Modifier.height(16.dp))
         Text(text = "Result:")
     }
 }
