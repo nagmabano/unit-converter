@@ -51,7 +51,6 @@ fun UnitConverter() {
 }
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    UnitConverterTheme {
-    }
+fun UnitConverterPreview() {
+    UnitConverter()
 }
